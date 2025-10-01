@@ -27,12 +27,12 @@ export const HeroGridCard = ({ hero }: Props) => {
     return (
         <>
             <Card className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-white to-gray-50">
-                <div className="relative h-64">
+                <div className="relative h-75">
                     <img
                         onClick={() => handleClick()}
                         src={hero.image ? hero.image : "/placeholder.svg"}
                         alt={hero.name}
-                        className="object-cover transition-all duration-500 group-hover:scale-110 absolute top-[-45px] w-full h-[310px]"
+                        className="object-cover transition-all duration-500 group-hover:scale-110 absolute top-[-45px] w-full h-[410px]"
                     />
 
                     {/* Status indicator */}
