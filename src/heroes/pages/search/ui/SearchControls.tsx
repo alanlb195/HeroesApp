@@ -9,7 +9,6 @@ import {
     Accordion,
     AccordionContent,
     AccordionItem,
-    AccordionTrigger,
 } from "@/components/ui/accordion"
 
 
@@ -61,7 +60,7 @@ export const SearchControls = () => {
                         onClick={() => {
                             if (activeAccordion === 'advanced-filters') {
 
-                                console.log('estan los filtros avanzados bro');
+                                // console.log('estan los filtros avanzados bro');
 
                                 setQueryParams('active-accordion', '');
 
@@ -71,7 +70,7 @@ export const SearchControls = () => {
                                 })
                                 return;
                             }
-                            console.log('no estan los filtros avanzados bro');
+                            // console.log('no estan los filtros avanzados bro');
 
                             setQueryParams('active-accordion', 'advanced-filters');
                         }}
@@ -97,6 +96,7 @@ export const SearchControls = () => {
             </div>
 
             <Accordion
+                data-testid="accordion"
                 type="single"
                 collapsible
                 className="w-full"
@@ -145,6 +145,7 @@ export const SearchControls = () => {
                                         onValueChange={(value) => {
                                             setQueryParams('strength', value[0].toString())
                                         }}
+                                        min={0}
                                         max={10}
                                         step={1} />
                                 </div>

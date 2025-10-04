@@ -28,9 +28,7 @@ export const CustomPagination = ({ totalPages }: Props) => {
             <div className="flex items-center justify-center space-x-2">
                 <Button
                     variant="outline" size="sm"
-                    disabled={
-                        page === 1
-                    }
+                    disabled={page === 1}
                     onClick={() => hanglePageChange(page - 1)}
                 >
                     <ChevronLeft className="h-4 w-4" />

@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, Navigate } from "react-router";
 import { HomePage } from "@/heroes/pages/home/HomePage";
 import { HeroPage } from "@/heroes/pages/hero/HeroePage";
 // import { SearchPage } from "@/heroes/pages/search/SearchPage";
@@ -46,6 +46,6 @@ export const appRouter = createBrowserRouter([
   // Not Found
   {
     path: "*",
-    element: <div>Page not found...</div>,
+    element: <Navigate to="/" />
   },
 ]);
